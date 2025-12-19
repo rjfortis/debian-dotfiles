@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+<keyboard>
+<chainQuitKey>C-g</chainQuitKey>
+<keybind key="W-Return"><action name="Execute"><command>alacritty</command></action></keybind>
+<keybind key="W-space"><action name="Execute"><command>rofi -show drun</command></action></keybind>
+<keybind key="A-Tab"><action name="NextWindow"><finalactions><action name="Focus"/><action name="Raise"/></finalactions></action></keybind>
+<keybind key="A-S-Tab"><action name="PreviousWindow"><finalactions><action name="Focus"/><action name="Raise"/></finalactions></action></keybind>
+</keyboard>
+</openbox_config>
