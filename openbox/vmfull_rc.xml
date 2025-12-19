@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+
+  <!-- ===================== -->
+  <!--      TECLADO         -->
+  <!-- ===================== -->
+  <keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+
+    <!-- Lanzadores -->
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </keybind>
+
+    <keybind key="W-space">
+      <action name="Execute">
+        <command>rofi -show drun -show-icons</command>
+      </action>
+    </keybind>
+
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
+
+    <keybind key="Print">
+      <action name="Execute">
+        <command>flameshot gui</command>
+      </action>
+    </keybind>
+
+    <!-- Gestión de ventanas -->
+    <keybind key="W-w">
+      <action name="Close"/>
+    </keybind>
+
+    <keybind key="W-m">
+      <action name="ToggleMaximize"/>
+    </keybind>
+
+    <keybind key="W-f">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+
+    <!-- Navegación de ventanas -->
+    <keybind key="A-Tab">
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+        </finalactions>
+      </action>
+    </keybind>
+
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+        </finalactions>
+      </action>
+    </keybind>
+
+    <!-- Mover ventanas -->
+    <keybind key="W-Left">
+      <action name="MoveRelative"><x>-20</x></action>
+    </keybind>
+
+    <keybind key="W-Right">
+      <action name="MoveRelative"><x>20</x></action>
+    </keybind>
+
+    <keybind key="W-Up">
+      <action name="MoveRelative"><y>-20</y></action>
+    </keybind>
+
+    <keybind key="W-Down">
+      <action name="MoveRelative"><y>20</y></action>
+    </keybind>
+
+    <!-- Escritorios -->
+    <keybind key="W-1">
+      <action name="GoToDesktop"><desktop>1</desktop></action>
+    </keybind>
+
+    <keybind key="W-2">
+      <action name="GoToDesktop"><desktop>2</desktop></action>
+    </keybind>
+
+    <keybind key="W-3">
+      <action name="GoToDesktop"><desktop>3</desktop></action>
+    </keybind>
+
+    <keybind key="W-4">
+      <action name="GoToDesktop"><desktop>4</desktop></action>
+    </keybind>
+
+    <keybind key="W-S-Left">
+      <action name="SendToDesktopLeft"/>
+    </keybind>
+
+    <keybind key="W-S-Right">
+      <action name="SendToDesktopRight"/>
+    </keybind>
+
+    <!-- Menú y sesión -->
+    <keybind key="W-Escape">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+
+    <keybind key="W-S-q">
+      <action name="Execute">
+        <command>openbox --exit</command>
+      </action>
+    </keybind>
+  </keyboard>
+
+  <!-- ===================== -->
+  <!--        RATÓN         -->
+  <!-- ===================== -->
+  <mouse>
+    <context name="Frame">
+      <mousebind button="A-Left" action="Press">
+        <action name="Move"/>
+      </mousebind>
+      <mousebind button="A-Right" action="Press">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+
+    <context name="Titlebar">
+      <mousebind button="Left" action="DoubleClick">
+        <action name="ToggleMaximize"/>
+      </mousebind>
+    </context>
+
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu">
+          <menu>root-menu</menu>
+        </action>
+      </mousebind>
+    </context>
+  </mouse>
+
+  <!-- ===================== -->
+  <!--     ESCRITORIOS      -->
+  <!-- ===================== -->
+  <desktops>
+    <number>4</number>
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
+    </names>
+  </desktops>
+
+  <!-- ===================== -->
+  <!--        FOCUS         -->
+  <!-- ===================== -->
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>no</followMouse>
+    <focusLast>yes</focusLast>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <!-- ===================== -->
+  <!--      PLACEMENT       -->
+  <!-- ===================== -->
+  <placement>
+    <policy>Smart</policy>
+    <center>yes</center>
+    <monitor>Primary</monitor>
+  </placement>
+
+  <!-- ===================== -->
+  <!--      RESISTANCE      -->
+  <!-- ===================== -->
+  <resistance>
+    <strength>10</strength>
+    <screen_edge_strength>20</screen_edge_strength>
+  </resistance>
+
+</openbox_config>
